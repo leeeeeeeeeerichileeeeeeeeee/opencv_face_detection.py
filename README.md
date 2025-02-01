@@ -1,86 +1,59 @@
-# Group Project Repository Submission Template 
-## Index
-  - [Overview](#overview) 
-  - [Getting Started](#getting-started)
-  - [Demo](#demo)
-  - [Authors](#authors)
-  - [References](#references)
-  - [Credits](#credits)
-<!--  Other options to write Readme
-  - [Deployment](#deployment)
-  - [Used or Referenced Projects](Used-or-Referenced-Projects)
--->
-## MRAC0X(XX/XX): ClassName XX - Student Project Name
-<!--Write a few sentences of academic context and project description -->  
-This project aims to demonstrate a fantastic application using fascinating technologies, developed within the scope of the best class ever.   
-## Overview
-<!-- Write Overview about this project -->
-The project's justification, state-of-the-art, and inspiration live in this section.
+# OpenCV Face Detection Project
 
-## Getting Started
+A Python-based repository designed for architecture and construction students to explore image processing concepts through practical exercises in real-time face detection.
 
-### Prerequisites
-Ensure that you fulfill the following criteria to replicate this project.
-* Ubuntu LTS 20.04 <
-* Python 3.7 <
-* Docker
+## Contents
 
-### Depencies
-The project's dependencies include:
-* Numpy - for matrix manipulation
-* OpenCV - for image processing
-* ROS - for interfacing with the robot
+1. **[Face Detection Script](opencv_face_detection.py)**  
+   Detect faces in real-time using a webcam, with bounding boxes displayed around detected faces.
 
-The dependencies are satisfied using the following sources:
+---
 
-```bash
-# ROS Noetic and core dependencies
-wget -c https://raw.githubusercontent.com/qboticslabs/ros_install_noetic/master/ros_install_noetic.sh && chmod +x ./ros_install_noetic.sh && ./ros_install_noetic.sh
-# install numpy
-pip3 install numpy setuptools
-```
+## **1. [Face Detection Script](opencv_face_detection.py)**
 
-### Installing
-A step by step series of examples that tell you how to get a development 
-env running
+This project introduces architecture students to the basics of OpenCV through a practical exercise in image processing. The program captures real-time video from a webcam, detects human faces, and highlights them with bounding boxes. It’s designed for beginners to learn Python and OpenCV while applying programming skills to an architecture-related task.
 
-```bash
-cd ~/catkin_ws/src
-git submodule init
-git submodule update
-cd ../
-rosdep install --from-paths src --ignore-src -r -y
-catkin_make -DCMAKE_BUILD_TYPE=Release
-source ./devel/setup.bash
-```
-### Deployment
-Add additional notes about how to deploy this on a live system
-* Run the application with `.docker/run_user_nvidia.sh`
-* Ensure that you are running the indicate command `sudo chmod -R <user_name> \dev_ws` for permitions
-* Run `terminator`
+#### Learning Objectives
 
-## Demo
-Here is what the project can do and what are the results.
+- Learn the basics of OpenCV for image processing.
+- Understand how to capture and process video frames in Python.
+- Implement face detection using pre-trained Haar cascade classifiers.
+- Apply image processing techniques in architectural contexts, such as smart systems.
 
-The project can be launched with the following command:
-* `roslaunch package_name package_name.launch`
+#### Features
 
-This opens up `rviz` and shows the robot moving around
+- **Real-Time Video Capture**: Access live video feed through a webcam.
+- **Face Detection**: Utilize OpenCV's pre-trained Haar cascade classifier to detect faces in video frames.
+- **Bounding Box Visualization**: Highlight detected faces with bounding boxes in real-time.
+- **Interactive Control**: Exit the program by pressing the `q` key.
 
-## Authors
-  - [Name](insert linkedin/webpage link) - role
+#### Tools & Libraries
+- Python
+- OpenCV (cv2 library)
 
-## References
-- [K. Albee et al., “A robust observation, planning, and control pipeline for autonomous rendezvous with tumbling targets,” Frontiers in Robotics and AI, vol. 8, p. 234, 2021, doi: 10.3389/frobt.2021.641338.](https://www.frontiersin.org/articles/10.3389/frobt.2021.641338/full)
+#### How to Run
 
-## Credits
-  - [Name](insert linkedin/webpage link) - role
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/yourusername/opencv-face-detection.git
+   cd opencv-face-detection
+   ```
+2. Install dependencies:
+   ```bash
+   pip install opencv-python
+   ```
+3. Run the script:
+   ```bash
+   python opencv_face_detection.py
+   ```
+4. Exit the program:
+   - Press the `q` key to quit the application.
 
-<!--  DO NOT REMOVE
--->
-#### Acknowledgements
+#### Future Improvements
+- Add support for detecting multiple facial features (e.g., eyes, smile).
+- Implement a face recognition module to identify individuals.
+- Include logging to track the number of detected faces over time.
+- Integrate with architectural smart systems for interactive spaces.
 
-- Creation of GitHub template: [Marita Georganta](https://www.linkedin.com/in/marita-georganta/) - Robotic Sensing Expert
-- Creation of MRAC-IAAC GitHub Structure: [Huanyu Li](https://www.linkedin.com/in/huanyu-li-457590268/) - Robotic Researcher
-
+---
 
